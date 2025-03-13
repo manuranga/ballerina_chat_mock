@@ -2,10 +2,10 @@ import ballerina/http;
 import ballerinax/ai.agent;
 import ballerina/os;
 
-configurable string apiKey = os:getEnv("API_KEY");
-configurable string deploymentId = "gpt4o";
-configurable string apiVersion = "2023-07-01-preview";
-configurable string serviceUrl = "https://ballerina-ai-eastus.openai.azure.com/openai";
+string apiKey = os:getEnv("API_KEY");
+string deploymentId = "gpt4o";
+string apiVersion = "2023-07-01-preview";
+string serviceUrl = "https://ballerina-ai-eastus.openai.azure.com/openai";
 
 final agent:Model model = check new agent:AzureOpenAiModel(serviceUrl, apiKey, deploymentId, apiVersion);
 final agent:Agent agent = check new (
