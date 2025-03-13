@@ -1,0 +1,10 @@
+schemaVersion: 1.1
+
+endpoints:
+  - name: chat-service
+    displayName: Chat Service
+    service:
+      port: 9090
+    type: REST
+    networkVisibilities: 
+      - Public
