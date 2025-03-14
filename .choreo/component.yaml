@@ -4,6 +4,7 @@ endpoints:
   - name: chat-service
     displayName: Chat Service
     service:
+      basePath: /mychat
       port: 9090
     type: REST
     networkVisibilities: 

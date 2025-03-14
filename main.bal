@@ -28,7 +28,7 @@ import ballerinax/ai.agent;
 // @agent:Tool
 // isolated function sqrt(float a) returns float => a.sqrt();
 
-service on new agent:Listener(9090) {
+service /mychat on new agent:Listener(9090) {
     resource function post chat(@http:Payload agent:ChatReqMessage request) returns agent:ChatRespMessage|error {
         // string response = check agent->run(request.message, memoryId = request.sessionId);
         return {message: request.message.toUpperAscii()};
